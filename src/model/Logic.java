@@ -3,12 +3,19 @@ package model;
 import java.util.ArrayList;
 
 public class Logic {
+	
 	private ArrayList<UserModel> listUsers;
+	private static Logic unicaInstance;
 
-	public Logic() {
-		
+	private Logic() {
 		listUsers = new ArrayList<UserModel>();
-		
+	}
+	
+	public static Logic getInstance() {
+		if(unicaInstance == null) {
+			unicaInstance = new Logic();
+		}
+		return unicaInstance;
 	}
 
 	public void registerNewUser(String username, String password, String email) {

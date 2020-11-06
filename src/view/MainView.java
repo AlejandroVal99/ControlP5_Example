@@ -19,6 +19,7 @@ public class MainView extends PApplet {
 	public void setup() {
 		screen = 0;
 		registerView = new RegisterView(this);
+		
 	}
 	public void draw() {
 		background(0);

@@ -4,8 +4,9 @@ import model.Logic;
 
 public class MainController {
 	private Logic logic;
+	
 	public MainController() {
-		logic = new Logic();
+		logic = Logic.getInstance();
 	}
 	public void getInfoUser(String username, String password, String email) {
 		
